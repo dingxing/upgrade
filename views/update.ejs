@@ -1,0 +1,346 @@
+<% include  header.ejs %>
+<% include navbar.ejs%>
+<!-- Left side column. contains the logo and sidebar -->
+<% include main_sidebar.ejs%>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1>
+			升级管理
+			<small>设置升级策略</small>
+		</h1>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+
+		<!-- SELECT2 EXAMPLE -->
+		<div class="box box-default">
+			<div class="box-header with-border">
+				<h3 class="box-title">升级说明</h3>
+
+				<div class="box-tools pull-right">
+					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+					<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+				</div>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							1.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+							2.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+							3.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+						</div>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.box-body -->
+			<div class="box-footer">
+				点击 <a href="https://select2.github.io/">此位置</a>查看完整升级文档
+			</div>
+		</div>
+		<!-- /.box -->
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="box box-info">
+					<div class="box-header">
+						<h3 class="box-title">上传升级包</h3>
+					</div>
+					<div class="box-body">
+
+						<div class="form-group">
+							<label>选择升级包</label>
+
+							<form action="/upload" method="post" enctype="multipart/form-data">
+								<h2>单图上传</h2>
+								<input type="file" id="upload"  name="upload">
+								<input type="submit" value="提交">
+								<p class="help-block">选择要上传的升级包.</p>
+							</form>
+
+
+
+
+
+						</div>
+					</div>
+					<!-- /.box-body -->
+				</div>
+
+
+
+
+				<div class="box box-danger">
+					<div class="box-header">
+						<h3 class="box-title">升级策略</h3>
+					</div>
+
+					<div class="box-body">
+						<form method="post" action="./123">
+							<div class="form-group">
+								<label>设置升级时间范围</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-clock-o"></i>
+									</div>
+									<input type="text" class="form-control pull-right" id="reservationtime">
+								</div>
+								<!-- /.input group -->
+							</div>
+
+							<div class="form-group">
+								<label>指定Mac地址</label>
+								<select class="form-control select2" multiple="multiple" data-placeholder=" Mac地址" style="width: 100%;">
+									<option>fc:a3:2f:6b:90:e7</option>
+									<option>f1:a1:2f:6b:91:e7</option>
+									<option>fc:a3:2f:6b:90:e7</option>
+									<option>f4:a3:2f:3b:90:e7</option>
+									<option>fc:b8:1f:6b:97:e7</option>
+									<option>fc:63:2f:6b:90:e7</option>
+									<option>f0:a3:2f:6b:91:e3</option>
+								</select>
+							</div>  
+
+							<div class="form-group">
+								<label>激活ID</label>
+								<select class="form-control select2" multiple="multiple" data-placeholder=" 激活id" style="width: 100%;">
+									<option>111111111</option>
+									<option>222222222</option>
+									<option>333333333</option>
+									<option>444444444</option>
+									<option>555555555</option>
+									<option>666666666</option>
+									<option>777777777</option>
+								</select>
+							</div>  
+
+							<div class="form-group">
+								<label>IP mask:</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-laptop"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+							<div class="form-group">
+								<label>应用版本号:</label>
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-laptop"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+							<!-- Date dd/mm/yyyy -->
+							<div class="form-group">
+								<label>升级数量</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+							<div class="form-group">
+								<label>机芯</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+
+							<div class="form-group">
+								<label>机型</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+
+							<div class="form-group">
+								<label>指定地区</label>
+
+								<div class="input-group">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+								</div>
+								<!-- /.input group -->
+							</div>
+
+							<div class="box-footer">
+								<div class="input-group">
+									<button type="submit" class="btn btn-primary">提交</button>
+									<button type="submit" class="btn btn-drange">重置</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col (left) -->
+			<div class="col-md-6">
+          <!-- <div class="box box-primary">
+            <div class="box-header">
+              <h3 class="box-title">Date picker</h3>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label>设置升级时间范围</label>
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="reservationtime">
+                </div>
+              </div>
+          </div> -->
+          <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+  </div>
+  <!-- /.col (right) -->
+</div>
+<!-- /.row -->
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<% include main_footer.ejs%>
+
+
+<!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./javascripts/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="./javascripts/bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="./javascripts/select2/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="./javascripts/input-mask/jquery.inputmask.js"></script>
+<script src="./javascripts/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="./javascripts/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="./javascripts/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap datepicker -->
+<script src="./javascripts/datepicker/bootstrap-datepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="./javascripts/colorpicker/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<script src="./javascripts/timepicker/bootstrap-timepicker.min.js"></script>
+<!-- SlimScroll 1.3.0 -->
+<script src="./javascripts/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- iCheck 1.0.1 -->
+<script src="./javascripts/iCheck/icheck.min.js"></script>
+<!-- FastClick -->
+<script src="./javascripts/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="./javascripts/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./javascripts/demo.js"></script>
+<!-- Page script -->
+<script>
+	$(function () {
+    //Initialize Select2 Elements
+    $(".select2").select2();
+
+    //Datemask dd/mm/yyyy
+    $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+    //Datemask2 mm/dd/yyyy
+    $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+    //Money Euro
+    $("[data-mask]").inputmask();
+
+    //Date range picker
+    $('#reservation').daterangepicker();
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+    {
+    	ranges: {
+    		'Today': [moment(), moment()],
+    		'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+    		'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+    		'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+    		'This Month': [moment().startOf('month'), moment().endOf('month')],
+    		'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    	},
+    	startDate: moment().subtract(29, 'days'),
+    	endDate: moment()
+    },
+    function (start, end) {
+    	$('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+    );
+
+    //Date picker
+    $('#datepicker').datepicker({
+    	autoclose: true
+    });
+
+    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+    	checkboxClass: 'icheckbox_minimal-blue',
+    	radioClass: 'iradio_minimal-blue'
+    });
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+    	checkboxClass: 'icheckbox_minimal-red',
+    	radioClass: 'iradio_minimal-red'
+    });
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+    	checkboxClass: 'icheckbox_flat-green',
+    	radioClass: 'iradio_flat-green'
+    });
+
+    //Colorpicker
+    $(".my-colorpicker1").colorpicker();
+    //color picker with addon
+    $(".my-colorpicker2").colorpicker();
+
+    //Timepicker
+    $(".timepicker").timepicker({
+    	showInputs: false
+    });
+});
+</script>
+</body>
+</html>
